@@ -1,0 +1,224 @@
+
+<!-- saved from url=(0076)http://www.bernabe.dorronsoro.es/vrp/Problem_Instances/CordeauFilesDesc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Cordeau's Instances Files Description</title>
+
+</head>
+
+<body link="#CCCCCC" text="#FFFFFF" background="stripe.gif" vlink="#CCCCCC" alink="#CCCCCC">
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=1603394; 
+var sc_invisible=1; 
+var sc_partition=15; 
+var sc_security="b1f74166"; 
+</script>
+
+<script type="text/javascript" language="javascript" src="frames.js"></script>
+<!-- End of StatCounter Code -->
+
+<p><font size="6">
+  <style type="text/css">
+    <!--a:link, a:visited, a:active {text-decoration: none} a:hover {color: #000000;text-decoration: underline;}-->
+</style>
+<script language="JavaScript">
+<!-- 
+if (parent.location.href == self.location.href)
+{ 
+  window.location.href = '../index.html?/Problem_Instances/CordeauFilesDesc.html'; 
+}
+// contains the FRAMESET definitions //-->
+</script>
+  Description for Files of Cordeau's Instances</font></p>
+<p><font size="4">The format of data and solution files in all directories is 
+  as follows: </font> </p>
+<p><font size="4">A) <font color="#FFFF00">DATA FILES</font></font></p>
+<p><font size="4">The <font color="#FFC200">first line</font> 
+  contains the following information:</font></p>
+<p><font size="4"> <font color="#00FF00">type m n t</font></font></p>
+<p><font size="4">where</font></p>
+<table border="0" width="608" height="323">
+  <tbody><tr> 
+    <td width="38"><font size="4" color="#00FF00">type</font><font size="4">&nbsp; </font></td>
+    <td width="23"><font size="4">=</font></td>
+    <td width="632"><font size="4">0 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/VRPDesc.html">VRP</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38">&nbsp;</td>
+    <td width="23">&nbsp;</td>
+    <td width="632"><font size="4">1 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/PVRPDesc.html">PVRP</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38">&nbsp;</td>
+    <td width="23">&nbsp;</td>
+    <td width="632"><font size="4">2 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/MDVRPDesc.html">MDVRP</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38">&nbsp;</td>
+    <td width="23">&nbsp;</td>
+    <td width="632"><font size="4">3 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/SDVRPDesc.html">SDVRP</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38">&nbsp;</td>
+    <td width="23">&nbsp;</td>
+    <td width="632"><font size="4">4 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/VRPTWDesc.html">VRPTW</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38" height="27">&nbsp;</td>
+    <td width="23" height="27">&nbsp;</td>
+    <td width="632" height="27"><font size="4">5 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/PVRPDesc.html">PVRPTW</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38">&nbsp;</td>
+    <td width="23">&nbsp;</td>
+    <td width="632"><font size="4">6 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/MDVRPDesc.html">MDVRPTW</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38">&nbsp;</td>
+    <td width="23">&nbsp;</td>
+    <td width="632"><font size="4">7 (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/SDVRPDesc.html">SDVRPTW</a>)</font></td>
+  </tr>
+  <tr> 
+    <td width="38"><font size="4"><font color="#00FF00">m</font> </font></td>
+    <td width="23"><font size="4">=</font></td>
+    <td width="632"><font size="4">number of vehicles</font></td>
+  </tr>
+  <tr> 
+    <td width="38"><font size="4"><font color="#00FF00">n</font> </font></td>
+    <td width="23">=</td>
+    <td width="632"><font size="4">number of customers</font></td>
+  </tr>
+  <tr> 
+    <td width="38"><font size="4"><font color="#00FF00">t</font></font></td>
+    <td width="23"><font size="4">=</font></td>
+    <td width="632"><font size="4">number of days (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/PVRPDesc.html">PVRP</a>), 
+      depots (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/MDVRPDesc.html">MDVRP</a>) or 
+      vehicle types (<a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/SDVRPDesc.html">SDVRP</a>)</font></td>
+  </tr>
+</tbody></table>
+<p><font size="4">The <font color="#FFC200">next t lines</font> contain, for each 
+  day (or depot or vehicle type), the following information:</font></p>
+<p><font size="4"> <font color="#00FF00">D Q</font></font></p>
+<p><font size="4">where</font></p>
+<table border="0" width="305" height="29">
+  <tbody><tr bordercolor="0">
+    <td width="24"><font size="4" color="#00FF00">D</font><font size="4">&nbsp; </font></td>
+    <td width="23"><font size="4">=</font></td>
+    <td width="236"><font size="4">maximum duration of a route</font></td>
+  </tr>
+  <tr bordercolor="0">
+    <td width="24"><font size="4" color="#00FF00">Q</font><font size="4">&nbsp; </font></td>
+    <td width="23"><font size="4">=</font></td>
+    <td width="236"><font size="4">maximum load of a vehicle</font></td>
+  </tr>
+</tbody></table>
+<p><font size="4">The <font color="#FFC200">next lines</font> contain, for each 
+  customer, the following information:</font></p>
+<p><font size="4"> <font color="#00FF00">i x y d q f a list e l</font></font></p>
+<p><font size="4">where</font></p>
+<table border="0" width="566" height="323">
+  <tbody><tr> 
+    <td width="28"><font size="4" color="#00FF00">i </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">customer number</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">x </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">x coordinate</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">y </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">y coordinate</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">d </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">service duration</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">q </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">demand</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">f </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">frequency of visit</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">a </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">number of possible visit combinations</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">list </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">list of all possible visit combinations</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">e </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">beginning of time window (earliest time for 
+      start of service), if any</font></td>
+  </tr>
+  <tr> 
+    <td width="28"><font size="4" color="#00FF00">l </font></td>
+    <td width="22">=</td>
+    <td width="494"><font size="4">end of time window (latest time for start of 
+      service), if any</font></td>
+  </tr>
+</tbody></table>
+<p><font size="4">Each visit combination is coded with the decimal equivalent 
+  of the corresponding binary bit string. For example, in a 5-day period, the 
+  code 10 which is equivalent to the bit string 01010 means that a customer is 
+  visited on days 2 and 4. (Days are numbered from left to right.)</font></p>
+<p><font size="4">Note : In the case of the <a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/MDVRPDesc.html">MDVRP</a>, 
+  the lines go from 1 to n + t and the last t entries correspond to the t depots. 
+  In the case of the <a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/VRPDesc.html">VRP</a>, 
+  <a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/PVRPDesc.html">PVRP</a> and <a href="http://www.bernabe.dorronsoro.es/vrp/Problem_Descriptions/MDVRPDesc.html">MDVRP</a>, 
+  the lines go from 0 to n and the first entry corresponds to the unique depot.</font></p>
+<p></p>
+<p></p>
+<p><font size="4">B) <font color="#FFFF00">SOLUTION FILES</font></font></p>
+<p><font size="4">The <font color="#FFC200">first line</font><font color="#8CFFFF"> 
+  </font>contains the <font color="#00FF00">cost of the solution</font> (total 
+  duration excluding service time).</font></p>
+<p><font size="4">The <font color="#FFC200">next lines</font> contain, <font color="#FFC200">for 
+  each route</font>, the following information:</font></p>
+<p><font size="4"> <font color="#00FF00">l k d q list</font></font></p>
+<p><font size="4">where</font></p>
+<table border="0" width="643" height="133">
+  <tbody><tr> 
+    <td width="35"><font size="4" color="#00FF00">l </font></td>
+    <td width="28">=</td>
+    <td width="626"><font size="4">number of the day (or depot or vehicle type)</font></td>
+  </tr>
+  <tr> 
+    <td width="35"><font size="4" color="#00FF00">k</font></td>
+    <td width="28">=</td>
+    <td width="626"><font size="4">number of the vehicle</font></td>
+  </tr>
+  <tr> 
+    <td width="35"><font size="4" color="#00FF00">d </font></td>
+    <td width="28">=</td>
+    <td width="626"><font size="4">duration of the route</font></td>
+  </tr>
+  <tr> 
+    <td width="35"><font size="4" color="#00FF00">q </font></td>
+    <td width="28">=</td>
+    <td width="626"><font size="4"> load of the vehicle</font></td>
+  </tr>
+  <tr> 
+    <td width="35"><font size="4" color="#00FF00">list </font></td>
+    <td width="28">=</td>
+    <td width="626"><font size="4">ordered sequence of customers (with start-of-service 
+      times, if applicable)</font></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+
+</body></html>

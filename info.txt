@@ -1,0 +1,53 @@
+Gen : 1998 Best : 5765.60179515585 Feasibility : true Avg : 7198.693088767498  total feasible percent : 74.0%
+Gen : 1999 Best : 5765.60179515585 Feasibility : true Avg : 16625.466094514024  total feasible percent : 64.0%
+REPAIR PROCESS, apply: 0 success: 0
+
+
+Three Opt- Apply: 4622914 AvgTimeTaken: 0.268292
+Inter Or Opt- Apply: 7701221 AvgTimeTaken: 0.228285
+Inter 2opt - Apply: 7700288 AvgTimeTaken: 0.220329
+Intra Or Opt- Apply: 4617823 AvgTimeTaken: 0.040574
+Two Opt- Apply: 4619755 AvgTimeTaken: 0.023782
+Pattern Improvement- Apply: 11550606 AvgTimeTaken: 0.140467
+
+CostReducedVehicleReassignment- Apply: 0 AvgTimeTaken: NaN
+
+benchmark/MDPVRP/pr05, Run: 1 -> Solution cost: 5765.601795 - Feasible
+benchmark/MDPVRP/pr05, 5765.601795, 5765.601795, 5765.601795, 1 
+ELAPSED TIME : 260 minutes 32 seconds
+
+after
+Three Opt- Apply: 44250 AvgTimeTaken: 0.117153
+Two Opt- Apply: 44257 AvgTimeTaken: 0.043360
+Inter Or Opt- Apply: 73275 AvgTimeTaken: 0.447547
+Intra Or Opt- Apply: 44473 AvgTimeTaken: 0.078744
+CostReducedVehicleReassignment- Apply: 0 AvgTimeTaken: NaN
+Pattern Improvement- Apply: 110655 AvgTimeTaken: 0.254403
+Inter 2opt - Apply: 73711 AvgTimeTaken: 0.418011
+
+Three Opt- Apply: 43301 AvgTimeTaken: 0.108150
+Two Opt- Apply: 43365 AvgTimeTaken: 0.037496
+Inter Or Opt- Apply: 72475 AvgTimeTaken: 0.403836
+Intra Or Opt- Apply: 43496 AvgTimeTaken: 0.070443
+CostReducedVehicleReassignment- Apply: 0 AvgTimeTaken: NaN
+Pattern Improvement- Apply: 108754 AvgTimeTaken: 0.236736
+Inter 2opt - Apply: 72338 AvgTimeTaken: 0.373289
+benchmark/MDPVRP/pr05, Run: 1 -> Solution cost: 6103.398940 - Feasible
+benchmark/MDPVRP/pr05, 6103.398940, 6103.398940, 6103.398940, 1 
+ELAPSED TIME : 3 minutes 58 seconds
+
+public static int POPULATION_SIZE = 10; 
+public static int NUMBER_OF_OFFSPRING = 10;   
+public static int NUMBER_OF_GENERATION = 50;
+
+pr03
+Three Opt- Apply: 27253 AvgTimeTaken: 0.071809
+Two Opt- Apply: 27255 AvgTimeTaken: 0.021647
+Inter Or Opt- Apply: 90702 AvgTimeTaken: 0.334546
+Intra Or Opt- Apply: 27011 AvgTimeTaken: 0.054015
+CostReducedVehicleReassignment- Apply: 0 AvgTimeTaken: NaN
+Pattern Improvement- Apply: 0 AvgTimeTaken: NaN
+Inter 2opt - Apply: 90401 AvgTimeTaken: 0.364919
+benchmark/MDVRP/pr03, Run: 1 -> Solution cost: 1818.653502 - Feasible
+benchmark/MDVRP/pr03, 1818.653502, 1818.653502, 1818.653502, 1 
+ELAPSED TIME : 1 minutes 47 seconds
