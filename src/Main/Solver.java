@@ -58,7 +58,7 @@ public class Solver
 	public static boolean gatherCrossoverStat=false;
 	
 	
-	public static String[] instanceFiles={"benchmark/MDVRP/pr10"};
+	public static String[] instanceFiles={"benchmark/MDPVRP/pr10"};
 
 	
 	//Component test varuables - change to true for turning different part off
