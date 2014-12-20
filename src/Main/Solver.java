@@ -36,7 +36,11 @@ public class Solver
 {
 	int aggregate_report_run_size=1;
 	public static boolean survivorElitistRationTest= false;
-	public static double ServivorElitistRation = 0.1;
+	public static double ServivorElitistRation = 0.3;
+	public static boolean localSearchProportionTest= false;
+	public static double localSearchProportion = 1;
+	
+	
 
 	public static boolean writeToExcel=true; // print every generation best, avg and worst costs
 	public static boolean generateAggregatedReport=true;
@@ -63,7 +67,7 @@ public class Solver
 	public static boolean gatherCrossoverStat=false;
 	
 	
-	public static String[] instanceFiles={"benchmark/MDPVRP/pr09"};
+	public static String[] instanceFiles={"benchmark/MDPVRP/pr03"};
 
 	
 	//Component test varuables - change to true for turning different part off
@@ -233,6 +237,31 @@ public class Solver
 			survivorELitistPrintWriter2.flush();
 			survivorELitistPrintWriter2.close();
 		}
+		else if(localSearchProportionTest)
+		{
+			
+			localLearnProportionPrintWriter = new PrintWriter("localLearningProportionFile_"+start +".csv");
+			localLearnProportionPrintWriter.println("Local Learning Proportion Test");
+			localLearnProportionPrintWriter.println("Problem Instance,Proportion,Solution Cost,Feasibility");
+			localLearnProportionPrintWriter.flush();
+			
+			localLearnProportionPrintWriter2 = new PrintWriter("localLearningProportionFile_Aggreagate_"+start +".csv");
+			localLearnProportionPrintWriter2.println("Local Learning Proportion Test Results");
+			localLearnProportionPrintWriter2.println("Instance, Proportion, Best, Average");
+			localLearnProportionPrintWriter2.flush();
+
+			localSearchProportion = 0;
+			for( localSearchProportion=0; localSearchProportion <=1; localSearchProportion+=0.1)
+			{
+				runGA();
+			}
+			
+			localLearnProportionPrintWriter.flush();
+			localLearnProportionPrintWriter.close();
+			localLearnProportionPrintWriter2.flush();
+			localLearnProportionPrintWriter2.close();
+
+		}
 		else
 		{
 			runGA();
@@ -323,6 +352,10 @@ public class Solver
 //	public static File survivorELitistRatioFile = new File("survivorELitistRatioFile");
 	public static PrintWriter survivorELitistPrintWriter=null;
 	public static PrintWriter survivorELitistPrintWriter2=null;
+	
+	public static PrintWriter localLearnProportionPrintWriter=null;
+	public static PrintWriter localLearnProportionPrintWriter2=null;
+	
 	public void runGA() throws Exception
 	{
 		
@@ -477,6 +510,16 @@ public class Solver
 					survivorELitistPrintWriter.format("\n");
 					survivorELitistPrintWriter.flush();
 				}
+			
+				if(localSearchProportionTest)
+				{
+					localLearnProportionPrintWriter.format("%s, %f, %f",instanceFiles[instanceNo], localSearchProportion, sol.costWithPenalty);
+					if(sol.isFeasible) localLearnProportionPrintWriter.format(", ");
+					else localLearnProportionPrintWriter.format(", Infeasible");
+					localLearnProportionPrintWriter.format("\n");
+					localLearnProportionPrintWriter.flush();
+				}
+			
 				
 			}
 			avg = sum/aggregate_report_run_size;
@@ -488,6 +531,13 @@ public class Solver
 					survivorELitistPrintWriter2.print(instanceFiles[instanceNo]+", "+ ServivorElitistRation +", "+min + ", "+avg);
 					survivorELitistPrintWriter2.format("\n");
 					survivorELitistPrintWriter2.flush();
+				}
+				
+				if(localSearchProportionTest)
+				{
+					localLearnProportionPrintWriter2.print(instanceFiles[instanceNo]+", "+ localSearchProportion +", "+min + ", "+avg);
+					localLearnProportionPrintWriter2.format("\n");
+					localLearnProportionPrintWriter2.flush();
 				}
 				
 				if(bksValue==-1)
