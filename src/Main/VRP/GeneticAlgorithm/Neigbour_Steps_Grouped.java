@@ -207,7 +207,15 @@ public class Neigbour_Steps_Grouped implements MutationInterface
 		{
 			//random+greedy       //inter
 			InterOneOneExchange.mutate(offspring);
-		}		
+		}
+		else if (selectedMutationOperator == 1)
+		{
+			//random+greedy       //inter
+			InterOneOneExchange.mutate(offspring);
+		}
+		
+		
+		
 	/*	else if (selectedMutationOperator == 2)
 		{
 			//only 1 vehicle per depot // cannot apply 2-opt*

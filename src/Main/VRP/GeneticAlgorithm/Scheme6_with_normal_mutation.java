@@ -50,7 +50,7 @@ public class Scheme6_with_normal_mutation implements GeneticAlgorithm
 	//Algorithm parameters
 	public static int POPULATION_SIZE = 50; 
 	public static int NUMBER_OF_OFFSPRING = 50;   
-	public static int NUMBER_OF_GENERATION = 1000;
+	public static int NUMBER_OF_GENERATION = 500;
 
 	public static int generation;
 	

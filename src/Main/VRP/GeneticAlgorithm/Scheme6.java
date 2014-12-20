@@ -22,8 +22,8 @@ import Main.VRP.SelectionOperator.SelectionOperator;
 public class Scheme6 implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	public static int POPULATION_SIZE = 100; 
-	public static int NUMBER_OF_OFFSPRING = 100;   
+	public static int POPULATION_SIZE = 10; 
+	public static int NUMBER_OF_OFFSPRING = 10;   
 	public static int NUMBER_OF_GENERATION = 500;
 //	public static double loadPenaltyFactor = 10;
 //	public static double routeTimePenaltyFactor = 10;
@@ -78,8 +78,8 @@ public class Scheme6 implements GeneticAlgorithm
 		
 		Individual offspring1,offspring2;
 
-		Individual.calculateAssignmentProbalityForDiefferentDepot(problemInstance);
-		Individual.calculateProbalityForDiefferentVehicle(problemInstance);
+		//Individual.calculateAssignmentProbalityForDiefferentDepot(problemInstance);
+		//Individual.calculateProbalityForDiefferentVehicle(problemInstance);
 		PopulationInitiator.initialisePopulation(population, POPULATION_SIZE, problemInstance);
 	//	TotalCostCalculator.calculateCostofPopulation(population,0, POPULATION_SIZE, loadPenaltyFactor, routeTimePenaltyFactor) ;
 		
@@ -214,46 +214,13 @@ public class Scheme6 implements GeneticAlgorithm
 			
 			
 			
-			/**
-			if(unImprovedGeneration>=5)
-			{
-				unImprovedGeneration=0;
-				
-				int sizeParentOffspring=parentOffspringTotalPopulation.length;
-				int margin=sizeParentOffspring/4;
-					
-				
-				Utility.sort(parentOffspringTotalPopulation);
-				
-				if(bestBeforeInjection == -1)
-				{
-					bestBeforeInjection = population[0].costWithPenalty;
-				}
-				else if(population[0].costWithPenalty == bestBeforeInjection)
-				{
-					//margin = 1;
-				}
-				
-				
-				ProblemInstance pInstance=population[0].problemInstance;
-				for(int noInject=margin;noInject<sizeParentOffspring;noInject++)
-				{
-					Individual newIndividual=new Individual(pInstance);
-					newIndividual.initialise();
-					
-					//double p = Utility.randomDouble(0, 1);
-					//if(p<=0.5)localSearch.improve(newIndividual, loadPenaltyFactor, routeTimePenaltyFactor);
-					
-					parentOffspringTotalPopulation[noInject]=newIndividual;
-				}
-				TotalCostCalculator.calculateCostofPopulation(parentOffspringTotalPopulation, 0,parentOffspringTotalPopulation.length, loadPenaltyFactor, routeTimePenaltyFactor) ;
-			}
-			*/
-			/************************ End of population Injection Block **************************/
-
-			
 			Utility.sort(population);	
 			
+			if(Solver.showViz && generation%25==0)
+			{	
+				Solver.visualiser.drawIndividual(new Individual(population[0]), "Best: "+population[0].costWithPenalty);
+				
+			}
 			/*if(Solver.singleRun)
 			{
 				double tmpSum=0;

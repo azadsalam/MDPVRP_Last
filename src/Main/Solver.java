@@ -34,7 +34,16 @@ import Main.VRP.LocalImprovement.SimulatedAnnealing;
 
 public class Solver 
 {
+	int aggregate_report_run_size=1;
+	public static boolean survivorElitistRationTest= false;
+	public static double ServivorElitistRation = 0.1;
 
+	public static boolean writeToExcel=true; // print every generation best, avg and worst costs
+	public static boolean generateAggregatedReport=true;
+	public static boolean printEveryGeneration = true;
+	public static boolean printFinalSolutionToFile=false; // output the final population in file
+
+	//public static int checkpoints[] = {2,4,8,10,12}; 
 	public static HashMap<String, Double> BKSmap;
 	public static double bksValue=-1; //saves the current instances BKS value
 	public static String errorString="";
@@ -45,11 +54,7 @@ public class Solver
 
 	public static int HallOfShamePCSize=-1;
 	
-	int aggregate_report_run_size=1;
-	public static boolean writeToExcel=false; // print every generation best, avg and worst costs
-	public static boolean generateAggregatedReport=true;
-	public static boolean printEveryGeneration = true;
-	public static boolean printFinalSolutionToFile=false; // output the final population in file
+
 	public static boolean showViz=false;
 	public static boolean checkForInvalidity=false;
 	
@@ -58,7 +63,7 @@ public class Solver
 	public static boolean gatherCrossoverStat=false;
 	
 	
-	public static String[] instanceFiles={"benchmark/MDPVRP/pr10"};
+	public static String[] instanceFiles={"benchmark/MDPVRP/pr09"};
 
 	
 	//Component test varuables - change to true for turning different part off
@@ -115,8 +120,7 @@ public class Solver
 	public static boolean onTest=false;
 	
 	//public static String singleInputFileName = "benchmark/MDPVRP/pr01";
-	public static double ServivorElitistRation = 0.10;
-	public static double LocalImprovementElitistRation = 0.1;
+	//public static double LocalImprovementElitistRation = 0.1;
 	
 	//public static String weightingSchemeOutputFileName = "parameters/weighting Scheme/"+singleInputFileName.substring(singleInputFileName.indexOf('/'))+".csv";
 	
@@ -205,8 +209,34 @@ public class Solver
 		
 		start = System.currentTimeMillis();
 		
-		runGA();
-	
+		if(survivorElitistRationTest)
+		{
+			survivorELitistPrintWriter = new PrintWriter("survivorELitistRatioFile_"+start +".csv");
+			survivorELitistPrintWriter.println("Survivor Elitist Ratio Test");
+			survivorELitistPrintWriter.println("Problem Instance,Ratio,Solution Cost,Feasibility");
+			survivorELitistPrintWriter.flush();
+		
+
+			survivorELitistPrintWriter2 = new PrintWriter("survivorELitistRatioFile_Aggreagate_"+start +".csv");
+			survivorELitistPrintWriter2.println("Survivor Elitist Ratio Test Results");
+			survivorELitistPrintWriter2.println("Instance, ElitismRatio, Best, Average");
+			
+			
+			ServivorElitistRation = 0;
+			for( ServivorElitistRation=0;ServivorElitistRation<=1;ServivorElitistRation+=0.1)
+			{
+				runGA();
+			}
+			
+			survivorELitistPrintWriter.flush();
+			survivorELitistPrintWriter.close();
+			survivorELitistPrintWriter2.flush();
+			survivorELitistPrintWriter2.close();
+		}
+		else
+		{
+			runGA();
+		}
 		if(printFinalSolutionToFile)output.close();
 		
 		end= System.currentTimeMillis();
@@ -289,8 +319,14 @@ public class Solver
 		}
 	}
 	
+	
+//	public static File survivorELitistRatioFile = new File("survivorELitistRatioFile");
+	public static PrintWriter survivorELitistPrintWriter=null;
+	public static PrintWriter survivorELitistPrintWriter2=null;
 	public void runGA() throws Exception
 	{
+		
+		
 		boolean once=false;
 		File reportFile;
 		PrintWriter reportOut=null;
@@ -432,11 +468,28 @@ public class Solver
 				System.out.format("%s, Run: %d -> Solution cost: %f",instanceFiles[instanceNo], i+1,sol.costWithPenalty);
 				if(sol.isFeasible) System.out.println(" - Feasible");
 				else System.out.println(" - Infeasible");
+				
+				if(survivorElitistRationTest)
+				{
+					survivorELitistPrintWriter.format("%s, %f, %f",instanceFiles[instanceNo], ServivorElitistRation, sol.costWithPenalty);
+					if(sol.isFeasible) survivorELitistPrintWriter.format(", ");
+					else survivorELitistPrintWriter.format(", Infeasible");
+					survivorELitistPrintWriter.format("\n");
+					survivorELitistPrintWriter.flush();
+				}
+				
 			}
 			avg = sum/aggregate_report_run_size;
 			
 			if(generateAggregatedReport)
 			{
+				if(survivorElitistRationTest)
+				{
+					survivorELitistPrintWriter2.print(instanceFiles[instanceNo]+", "+ ServivorElitistRation +", "+min + ", "+avg);
+					survivorELitistPrintWriter2.format("\n");
+					survivorELitistPrintWriter2.flush();
+				}
+				
 				if(bksValue==-1)
 				{
 					reportOut.format("%s, %f, %f, %f, %d \n",instanceFiles[instanceNo],min,avg,max,feasibleCount);
@@ -476,6 +529,7 @@ public class Solver
 			reportOut.flush();
 			reportOut.close();
 		}
+		
 	}
 	
 	

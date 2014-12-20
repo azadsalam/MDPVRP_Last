@@ -33,7 +33,7 @@ public class RandomMutation implements MutationInterface
 	
 	public void applyMutation(Individual offspring)
 	{
-		int rand = 4;
+		int rand = 3;
 		if(offspring.problemInstance.periodCount==1)rand-=1;
 		
 		int selectedMutationOperator = Utility.randomIntExclusive(rand);
