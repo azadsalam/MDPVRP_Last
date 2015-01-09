@@ -46,10 +46,10 @@ public class RandomMutation implements MutationInterface
 		{
 			IntraRouteRandomInsertion.mutate(offspring);
 		}
-		else if(rand==2)
+		/*else if(rand==2)
 		{
 			IntraRouteRandomSwap.mutate(offspring);
-		}		
+		}*/		
 		else
 		{
 			PatternMutation.mutate(offspring, Solver.loadPenaltyFactor, Solver.routeTimePenaltyFactor, true);
