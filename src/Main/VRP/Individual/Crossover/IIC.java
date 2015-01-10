@@ -270,7 +270,7 @@ public class IIC
 		copyAllFromParent(parent2, child, period, v1, clientMap, print);
 
 		
-		int remaining=problemInstance.customerCount;
+/*		int remaining=problemInstance.customerCount;
 		for(int i=0;i<problemInstance.customerCount;i++)
 		{
 			if(clientMap[i]==true && child.periodAssignment[period][i]==false)
@@ -284,7 +284,7 @@ public class IIC
 		}
 		if(remaining != 0)
 			System.out.println("ERROR - REmaining: "+remaining);
-	}
+*/	}
 	
 	/**
 	 * appends the routes specified in vehicle list of the specified periods from the parent to child. 

@@ -208,12 +208,12 @@ public class Neigbour_Steps_Grouped implements MutationInterface
 			//random+greedy       //inter
 			InterOneOneExchange.mutate(offspring);
 		}
-		else if (selectedMutationOperator == 1)
+/*		else if (selectedMutationOperator == 1)
 		{
 			//random+greedy       //inter
 			InterOneOneExchange.mutate(offspring);
 		}
-		
+*/		
 		
 		
 	/*	else if (selectedMutationOperator == 2)
