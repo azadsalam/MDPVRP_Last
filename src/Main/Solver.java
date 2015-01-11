@@ -34,11 +34,12 @@ import Main.VRP.LocalImprovement.SimulatedAnnealing;
 
 public class Solver 
 {
-	int aggregate_report_run_size=1;
+	int aggregate_report_run_size=2;
+	public static boolean noteAllResults=true;
 	public static boolean survivorElitistRationTest= false;
-	public static double ServivorElitistRation = 0.3;
+	public static double ServivorElitistRation = 0.25;
 	public static boolean localSearchProportionTest= false;
-	public static double localSearchProportion = 1;
+	public static double localSearchProportion = 0.25;
 	
 	
 
@@ -67,7 +68,7 @@ public class Solver
 	public static boolean gatherCrossoverStat=false;
 	
 	
-	public static String[] instanceFiles={"benchmark/MDPVRP/pr03"};
+	public static String[] instanceFiles={"benchmark/MDPVRP/pr01","benchmark/MDPVRP/pr02"};
 
 	
 	//Component test varuables - change to true for turning different part off
@@ -312,6 +313,7 @@ public class Solver
 	}
 	
 	
+	
 	/**
 	 * gathers the min,avg and max cost \n
 	 * Assumes all individuals cost+penalty is evaluated already
@@ -356,6 +358,8 @@ public class Solver
 	public static PrintWriter localLearnProportionPrintWriter=null;
 	public static PrintWriter localLearnProportionPrintWriter2=null;
 	
+	public static PrintWriter noteAllResultsPrintWriter=null;
+	
 	public void runGA() throws Exception
 	{
 		
@@ -388,6 +392,12 @@ public class Solver
 			reportOut.println("Report Generation Time , "+timeStamp);
 		}
 		
+		if(noteAllResults)
+		{
+			File allresults = new File("all_results_"+timeStamp+".csv");
+			noteAllResultsPrintWriter = new PrintWriter(allresults);
+			
+		}
 		
 
 		for(int instanceNo=0;instanceNo<instanceFiles.length;instanceNo++)
@@ -502,6 +512,18 @@ public class Solver
 				if(sol.isFeasible) System.out.println(" - Feasible");
 				else System.out.println(" - Infeasible");
 				
+				
+				if(noteAllResults)
+				{
+					noteAllResultsPrintWriter.format("%s, %f, ",instanceFiles[instanceNo],sol.costWithPenalty);
+					
+					if(!sol.isFeasible)noteAllResultsPrintWriter.print("Infeasible");
+					//else noteAllResultsPrintWriter.print("Feasible");
+					
+					noteAllResultsPrintWriter.println();
+					noteAllResultsPrintWriter.flush();
+				}
+					
 				if(survivorElitistRationTest)
 				{
 					survivorELitistPrintWriter.format("%s, %f, %f",instanceFiles[instanceNo], ServivorElitistRation, sol.costWithPenalty);
@@ -539,6 +561,8 @@ public class Solver
 					localLearnProportionPrintWriter2.format("\n");
 					localLearnProportionPrintWriter2.flush();
 				}
+				
+				
 				
 				if(bksValue==-1)
 				{
@@ -578,6 +602,10 @@ public class Solver
 			reportOut.println("\nELAPSED TIME : " + minute+ " minutes "+seconds+" seconds");
 			reportOut.flush();
 			reportOut.close();
+		}
+		if(noteAllResults)
+		{
+			noteAllResultsPrintWriter.close();
 		}
 		
 	}
