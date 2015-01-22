@@ -37,9 +37,9 @@ public class Solver
 	int aggregate_report_run_size=2;
 	public static boolean noteAllResults=true;
 	public static boolean survivorElitistRationTest= false;
-	public static double ServivorElitistRation = 0.25;
+	public static double ServivorElitistRation = 1;
 	public static boolean localSearchProportionTest= false;
-	public static double localSearchProportion = 0.25;
+	public static double localSearchProportion = 0.5;
 	
 	
 

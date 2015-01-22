@@ -29,7 +29,7 @@ public class IIC
 	{
 		UniformCrossoverPeriodAssigment.uniformCrossoverForPeriodAssignment(child,parent1, parent2,problemInstance);
 
-		reAlignParentRoutes(parent1, parent2, problemInstance);
+		//reAlignParentRoutes(parent1, parent2, problemInstance);
 		
 		TotalCostCalculator.calculateCost(parent1, Solver.loadPenaltyFactor, Solver.routeTimePenaltyFactor);
 		TotalCostCalculator.calculateCost(parent2, Solver.loadPenaltyFactor, Solver.routeTimePenaltyFactor);
