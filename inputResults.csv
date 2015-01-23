@@ -1,58 +1,100 @@
-benchmark/MDPVRP/pr01,1973.035409, 
-benchmark/MDPVRP/pr01,1973.035409, 
-benchmark/MDPVRP/pr01,1978.667321, 
-benchmark/MDPVRP/pr01,1984.816008, 
-benchmark/MDPVRP/pr02,3490.808716, 
-benchmark/MDPVRP/pr02,3492.529931, 
-benchmark/MDPVRP/pr02,3495.751546, 
-benchmark/MDPVRP/pr02,3499.149613, 
-benchmark/MDPVRP/pr03,4363.315529, 
-benchmark/MDPVRP/pr03,4395.149, 
-benchmark/MDPVRP/pr03,4405.298369, 
-benchmark/MDPVRP/pr03,4447.622811, 
-benchmark/MDPVRP/pr04,5093.480628, 
-benchmark/MDPVRP/pr04,5099.240983, 
-benchmark/MDPVRP/pr04,5120.185221, 
-benchmark/MDPVRP/pr04,5127.633363, 
-benchmark/MDPVRP/pr05,5602.397913, 
-benchmark/MDPVRP/pr05,5637.37368, 
-benchmark/MDPVRP/pr05,5640.184255, 
-benchmark/MDPVRP/pr05,5650.289528, 
-benchmark/MDPVRP/pr05,5656.487575, 
-benchmark/MDPVRP/pr05,5656.89053, 
-benchmark/MDPVRP/pr05,5666.604976, 
-benchmark/MDPVRP/pr06,6568.819184, 
-benchmark/MDPVRP/pr06,6591.64779, 
-benchmark/MDPVRP/pr06,6601.799473, 
-benchmark/MDPVRP/pr06,6610.72793, 
-benchmark/MDPVRP/pr06,6616.63413, 
-benchmark/MDPVRP/pr06,6616.985182, 
-benchmark/MDPVRP/pr06,6621.559343, 
-benchmark/MDPVRP/pr06,6625.069009, 
-benchmark/MDPVRP/pr06,6656.897094, 
-benchmark/MDPVRP/pr06,6668.954872, 
-benchmark/MDPVRP/pr07,4382.113666, 
-benchmark/MDPVRP/pr07,4383.619838, 
-benchmark/MDPVRP/pr07,4385.229311, 
-benchmark/MDPVRP/pr07,4389.192326, 
-benchmark/MDPVRP/pr08,5846.397038, 
-benchmark/MDPVRP/pr08,5855.275461, 
-benchmark/MDPVRP/pr08,5865.284308, 
-benchmark/MDPVRP/pr08,5881.776797, 
-benchmark/MDPVRP/pr08,5884.685404, 
-benchmark/MDPVRP/pr08,5888.416224, 
-benchmark/MDPVRP/pr08,5893.157268, 
-benchmark/MDPVRP/pr09,8193.958366, 
-benchmark/MDPVRP/pr09,8208.10163, 
-benchmark/MDPVRP/pr09,8220.026828, 
-benchmark/MDPVRP/pr09,8302.814613, 
-benchmark/MDPVRP/pr10,9946.616031, 
-benchmark/MDPVRP/pr10,9970.674383, 
-benchmark/MDPVRP/pr10,10012.54845, 
-benchmark/MDPVRP/pr10,10040.28965, 
-benchmark/MDPVRP/pr10,10050.89398, 
-benchmark/MDPVRP/pr10,10050.96102, 
-benchmark/MDPVRP/pr10,10057.09911, 
-benchmark/MDPVRP/pr10,10093.32432, 
-benchmark/MDPVRP/pr10,10100.72859, 
-benchmark/MDPVRP/pr10,10125.47992, 
+benchmark/MDPVRP/pr01,4212.073695, 
+benchmark/MDPVRP/pr01,4537.397732, 
+benchmark/MDPVRP/pr01,4586.098653, 
+benchmark/MDPVRP/pr01,4601.355704, 
+benchmark/MDPVRP/pr01,4611.921664, 
+benchmark/MDPVRP/pr01,4630.701471, 
+benchmark/MDPVRP/pr01,4734.202637, 
+benchmark/MDPVRP/pr01,4883.860546, 
+benchmark/MDPVRP/pr01,5061.017178, 
+benchmark/MDPVRP/pr01,5082.921447, 
+benchmark/MDPVRP/pr02,366540.3855, Infeasible
+benchmark/MDPVRP/pr02,394696.8697, Infeasible
+benchmark/MDPVRP/pr02,396028.4062, Infeasible
+benchmark/MDPVRP/pr02,429073.981, Infeasible
+benchmark/MDPVRP/pr02,433942.1929, Infeasible
+benchmark/MDPVRP/pr02,437542.574, Infeasible
+benchmark/MDPVRP/pr02,438161.4401, Infeasible
+benchmark/MDPVRP/pr02,442719.7707, Infeasible
+benchmark/MDPVRP/pr02,445248.2983, Infeasible
+benchmark/MDPVRP/pr02,466277.5926, Infeasible
+benchmark/MDPVRP/pr03,611363.3085, Infeasible
+benchmark/MDPVRP/pr03,623693.9609, Infeasible
+benchmark/MDPVRP/pr03,653439.5063, Infeasible
+benchmark/MDPVRP/pr03,692867.8251, Infeasible
+benchmark/MDPVRP/pr03,711775.075, Infeasible
+benchmark/MDPVRP/pr03,726597.5709, Infeasible
+benchmark/MDPVRP/pr03,751809.5828, Infeasible
+benchmark/MDPVRP/pr03,758603.6196, Infeasible
+benchmark/MDPVRP/pr03,759906.9637, Infeasible
+benchmark/MDPVRP/pr03,768933.007, Infeasible
+benchmark/MDPVRP/pr04,1972459.003, Infeasible
+benchmark/MDPVRP/pr04,2130636.752, Infeasible
+benchmark/MDPVRP/pr04,2143197.132, Infeasible
+benchmark/MDPVRP/pr04,2162773.39, Infeasible
+benchmark/MDPVRP/pr04,2208859.855, Infeasible
+benchmark/MDPVRP/pr04,2214750.154, Infeasible
+benchmark/MDPVRP/pr04,2231114.316, Infeasible
+benchmark/MDPVRP/pr04,2311631.912, Infeasible
+benchmark/MDPVRP/pr04,2338888.174, Infeasible
+benchmark/MDPVRP/pr04,2370935.132, Infeasible
+benchmark/MDPVRP/pr05,2185782.093, Infeasible
+benchmark/MDPVRP/pr05,2254133.133, Infeasible
+benchmark/MDPVRP/pr05,2294678.537, Infeasible
+benchmark/MDPVRP/pr05,2310975.688, Infeasible
+benchmark/MDPVRP/pr05,2358566.309, Infeasible
+benchmark/MDPVRP/pr05,2403473.148, Infeasible
+benchmark/MDPVRP/pr05,2447925.73, Infeasible
+benchmark/MDPVRP/pr05,2532880.368, Infeasible
+benchmark/MDPVRP/pr05,2546774.627, Infeasible
+benchmark/MDPVRP/pr05,2610487.101, Infeasible
+benchmark/MDPVRP/pr06,5451142.988, Infeasible
+benchmark/MDPVRP/pr06,5505846.959, Infeasible
+benchmark/MDPVRP/pr06,5632807.36, Infeasible
+benchmark/MDPVRP/pr06,5775798.663, Infeasible
+benchmark/MDPVRP/pr06,5785884.595, Infeasible
+benchmark/MDPVRP/pr06,5801958.575, Infeasible
+benchmark/MDPVRP/pr06,5995011.377, Infeasible
+benchmark/MDPVRP/pr06,6006977.165, Infeasible
+benchmark/MDPVRP/pr06,6014438.673, Infeasible
+benchmark/MDPVRP/pr06,6141481.732, Infeasible
+benchmark/MDPVRP/pr07,11892.67409, 
+benchmark/MDPVRP/pr07,12006.90353, Infeasible
+benchmark/MDPVRP/pr07,12298.88685, Infeasible
+benchmark/MDPVRP/pr07,12842.62949, Infeasible
+benchmark/MDPVRP/pr07,13452.33424, Infeasible
+benchmark/MDPVRP/pr07,14002.59727, Infeasible
+benchmark/MDPVRP/pr07,14382.56082, Infeasible
+benchmark/MDPVRP/pr07,15322.88646, Infeasible
+benchmark/MDPVRP/pr07,15559.3163, Infeasible
+benchmark/MDPVRP/pr07,22992.51943, Infeasible
+benchmark/MDPVRP/pr08,1766288.928, Infeasible
+benchmark/MDPVRP/pr08,1768251.091, Infeasible
+benchmark/MDPVRP/pr08,1801919.691, Infeasible
+benchmark/MDPVRP/pr08,1849435.275, Infeasible
+benchmark/MDPVRP/pr08,1962052.778, Infeasible
+benchmark/MDPVRP/pr08,1979063.593, Infeasible
+benchmark/MDPVRP/pr08,1981881.133, Infeasible
+benchmark/MDPVRP/pr08,1990332.415, Infeasible
+benchmark/MDPVRP/pr08,2025426.655, Infeasible
+benchmark/MDPVRP/pr08,2104711.842, Infeasible
+benchmark/MDPVRP/pr09,2805815.655, Infeasible
+benchmark/MDPVRP/pr09,3063821.597, Infeasible
+benchmark/MDPVRP/pr09,3080241.634, Infeasible
+benchmark/MDPVRP/pr09,3166867.574, Infeasible
+benchmark/MDPVRP/pr09,3253006.006, Infeasible
+benchmark/MDPVRP/pr09,3291193.3, Infeasible
+benchmark/MDPVRP/pr09,3443095.026, Infeasible
+benchmark/MDPVRP/pr09,3447427.787, Infeasible
+benchmark/MDPVRP/pr09,3606185.329, Infeasible
+benchmark/MDPVRP/pr09,3610950.142, Infeasible
+benchmark/MDPVRP/pr10,4452591.126, Infeasible
+benchmark/MDPVRP/pr10,4573125.51, Infeasible
+benchmark/MDPVRP/pr10,4674975.647, Infeasible
+benchmark/MDPVRP/pr10,4796659.5, Infeasible
+benchmark/MDPVRP/pr10,4877041.805, Infeasible
+benchmark/MDPVRP/pr10,4919910.151, Infeasible
+benchmark/MDPVRP/pr10,4944842.695, Infeasible
+benchmark/MDPVRP/pr10,5074245.851, Infeasible
+benchmark/MDPVRP/pr10,5261264.532, Infeasible
+benchmark/MDPVRP/pr10,5588730.626, Infeasible
