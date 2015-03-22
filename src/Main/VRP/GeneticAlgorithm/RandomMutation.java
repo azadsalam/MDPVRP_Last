@@ -38,18 +38,14 @@ public class RandomMutation implements MutationInterface
 		
 		int selectedMutationOperator = Utility.randomIntExclusive(rand);
 		
-		if(rand==0)
+		if(selectedMutationOperator==0)
 		{
 			OneZeroExchangePrev.interRouteOneZeroExchange(offspring,false, false);
 		}
-		else if(rand==1)
+		else if(selectedMutationOperator==1)
 		{
 			IntraRouteRandomInsertion.mutate(offspring);
-		}
-		/*else if(rand==2)
-		{
-			IntraRouteRandomSwap.mutate(offspring);
-		}*/		
+		}		
 		else
 		{
 			PatternMutation.mutate(offspring, Solver.loadPenaltyFactor, Solver.routeTimePenaltyFactor, true);

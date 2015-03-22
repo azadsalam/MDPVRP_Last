@@ -48,9 +48,9 @@ import Main.VRP.SelectionOperator.SelectionOperator;
 public class Scheme6_with_normal_mutation implements GeneticAlgorithm
 {
 	//Algorithm parameters
-	public static int POPULATION_SIZE = 10; 
-	public static int NUMBER_OF_OFFSPRING = 10;   
-	public static int NUMBER_OF_GENERATION = 5;
+	public static int POPULATION_SIZE = 100; 
+	public static int NUMBER_OF_OFFSPRING = 100;   
+	public static int NUMBER_OF_GENERATION = 100;
 
 	public static int generation;
 	
