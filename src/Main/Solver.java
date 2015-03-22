@@ -34,13 +34,12 @@ import Main.VRP.LocalImprovement.SimulatedAnnealing;
 
 public class Solver 
 {
-	int aggregate_report_run_size=2;
+	int aggregate_report_run_size=1;
 	public static boolean noteAllResults=true;
 	public static boolean survivorElitistRationTest= false;
 	public static double ServivorElitistRation = 1;
 	public static boolean localSearchProportionTest= false;
 	public static double localSearchProportion = 0.5;
-	
 	
 
 	public static boolean writeToExcel=true; // print every generation best, avg and worst costs
@@ -60,7 +59,7 @@ public class Solver
 	public static int HallOfShamePCSize=-1;
 	
 
-	public static boolean showViz=false;
+	public static boolean showViz=true;
 	public static boolean checkForInvalidity=false;
 	
 	public static boolean improveRouteAfterInterRouteOperation= true;
@@ -68,7 +67,7 @@ public class Solver
 	public static boolean gatherCrossoverStat=false;
 	
 	
-	public static String[] instanceFiles={"benchmark/MDPVRP/pr01","benchmark/MDPVRP/pr02"};
+	public static String[] instanceFiles={"benchmark/MDPVRP/pr09"};
 
 	
 	//Component test varuables - change to true for turning different part off

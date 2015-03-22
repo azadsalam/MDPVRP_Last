@@ -280,10 +280,10 @@ class Surface extends JPanel {
         for(int i=0;i<Visualiser.c_x.length;i++)
         {
         	if(individual.periodAssignment[selectedPeriod][i]==true) g2d.setColor(Color.CYAN);
-        	else g2d.setColor(new Color(245,245,240));
+        	else g2d.setColor(Color.CYAN);//g2d.setColor(new Color(245,245,240));
             g2d.fillOval(Visualiser.c_x[i] - clientRadius , Visualiser.c_y[i] - clientRadius, clientRadius*2, clientRadius*2);
             
-
+//            g2d.setColor(Color.black);
         	if(individual.periodAssignment[selectedPeriod][i]==true)
     		{
         		g2d.setColor(Color.black);
@@ -300,6 +300,8 @@ class Surface extends JPanel {
         	
         	g2d.setColor(Visualiser.colors[i]);
  
+        	if(true)continue;
+        	
         	if(route.size()==0)continue;
         	
         	int depot  = individual.problemInstance.depotAllocation[selectedVehicle];
