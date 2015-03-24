@@ -10,6 +10,7 @@ import Main.VRP.Individual.Individual;
 import Main.VRP.Individual.RouteUtilities;
 import Main.VRP.Individual.MutationOperators.CostReducedVehicleReAssignment;
 import Main.VRP.Individual.MutationOperators.GreedyVehicleReAssignmentQuickSelect;
+import Main.VRP.Individual.MutationOperators.InterChainExchange;
 import Main.VRP.Individual.MutationOperators.Inter_2_Opt;
 import Main.VRP.Individual.MutationOperators.IntraRouteRandomInsertion;
 import Main.VRP.Individual.MutationOperators.IntraRouteGreedyInsertion;
@@ -190,7 +191,7 @@ public class Neigbour_Steps_Grouped implements MutationInterface
 	
 	public void mutateRouteAssignment(Individual offspring, double loadPenaltyFactor, double routeTimePenaltyFactor)
 	{
-		int totalOperators = 2;
+		int totalOperators = 3;
 		int selectedMutationOperator = Utility.randomIntExclusive(totalOperators);
 
 		if (selectedMutationOperator == 0)
@@ -208,6 +209,13 @@ public class Neigbour_Steps_Grouped implements MutationInterface
 			//random+greedy       //inter
 			InterOneOneExchange.mutate(offspring);
 		}
+		else if (selectedMutationOperator == 2)
+		{
+			//random+greedy       //inter
+			InterChainExchange.mutate(offspring);
+		}
+		
+		
 /*		else if (selectedMutationOperator == 1)
 		{
 			//random+greedy       //inter

@@ -300,7 +300,7 @@ class Surface extends JPanel {
         	
         	g2d.setColor(Visualiser.colors[i]);
  
-        	if(true)continue;
+//        	if(true)continue;
         	
         	if(route.size()==0)continue;
         	
